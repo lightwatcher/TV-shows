@@ -1,0 +1,31 @@
+<h1>Charecters</h1>
+
+<p><a href="/new_charecter">Add a New Charecter</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Show</th>
+      <th>Plays</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @charecters.each do |charecter| %>
+    <tr>
+          <td><%= charecter.actor_id %></td>
+          <td><%= charecter.show_id %></td>
+          <td><%= charecter.plays %></td>
+          <td><a href="/charecters/<%= charecter.id %>">Show</a>
+        </td>
+      <td><a href="/charecters/<%= charecter.id %>/edit">Edit</a></td>
+      <td><a href="/charecters/<%= charecter.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

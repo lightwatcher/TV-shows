@@ -1,0 +1,17 @@
+<h1>On #<%= @on.id %></h1>
+
+<div>
+  <strong>Show</strong>:<br />
+  <p><%= @on.show_id %></p>
+</div>
+<div>
+  <strong>Network</strong>:<br />
+  <p><%= @on.network_id %></p>
+</div>
+<div>
+  <strong>Appears at</strong>:<br />
+  <p><%= @on.appears_at %></p>
+</div>
+
+<a href="/ons/<%= @on.id %>/edit">Edit</a> |
+<a href="/ons/<%= @on.id %>/destroy">Destroy</a>

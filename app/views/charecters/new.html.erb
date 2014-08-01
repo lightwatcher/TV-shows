@@ -1,0 +1,30 @@
+<h1>New Charecter</h1>
+
+<form action="/create_charecter">
+  <div>
+    <label for="actor_id">Select your actor</label><br />
+    <select id="show_id" name="show_id">
+      <option value="">Select one</option>
+      <% @actors.each do |actor|%>
+      <option <%= if (@selected.to_i == actor.id) then "selected" end %> value="<%= actor.id %>"> <%= actor.name %> </option>
+      <% end%>
+    </select>
+  </div>
+  <div>
+    <label for="show_id">Select your show</label><br />
+    <select>
+      <option value="">Select one</option>
+      <% @shows.each do |show|%>
+      <option id="show_id" name="show_id" value="<%= show.id %>" > <%= show.title %></option>
+      <% end%>
+    </select>
+  </div>
+  <div>
+    <label for="plays">Who does he/she play?</label><br />
+    <input id="plays" name="plays" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+

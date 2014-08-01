@@ -1,0 +1,17 @@
+<h1>Charecter #<%= @charecter.id %></h1>
+
+<div>
+  <strong>Actor</strong>:<br />
+  <p><%= @charecter.actor_id %></p>
+</div>
+<div>
+  <strong>Show</strong>:<br />
+  <p><%= @charecter.show_id %></p>
+</div>
+<div>
+  <strong>Plays</strong>:<br />
+  <p><%= @charecter.plays %></p>
+</div>
+
+<a href="/charecters/<%= @charecter.id %>/edit">Edit</a> |
+<a href="/charecters/<%= @charecter.id %>/destroy">Destroy</a>

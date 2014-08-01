@@ -1,0 +1,19 @@
+<h1><%= @actor.name %></h1>
+<div>
+  <img src="<%= @actor.src %>" height=200px width=200px> 
+</div>
+<div>
+  <strong>Bio</strong>:<br />
+  <p><%= @actor.bio %></p>
+</div>
+<div>
+<strong>Actor is in</strong>:<br />
+  <% @actor.charecters.each do |charecter| %>
+  <%= charecter.show.title %> where he/she plays <%=charecter.plays%>
+  <% end %>
+</div>
+
+<a href="/actors/<%= @actor.id %>/edit">Edit</a> |
+<a href="/actors/<%= @actor.id %>/destroy">Destroy</a> |
+<a href="/new_charecter/<%= @actor.id %>">Add <%= @actor.name %> to a new show </a>
+

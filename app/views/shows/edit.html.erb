@@ -1,0 +1,21 @@
+<h1>Editing Show #<%= @show.id %></h1>
+
+<form action="/shows/<%= @show.id %>/update">
+  <div>
+    <label for="title">title</label><br />
+    <input id="title" name="title" value="<%= @show.title  %>" type="text" />
+  </div>
+  <div>
+    <label for="descrip">descrip</label><br />
+    <input id="descrip" name="descrip" value="<%= @show.descrip  %>" type="text" />
+  </div>
+  <div>
+    <label for="episode_num">episode_num</label><br />
+    <input id="episode_num" name="episode_num" value="<%= @show.episode_num  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

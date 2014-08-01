@@ -1,0 +1,13 @@
+<h1>Editing Network #<%= @network.id %></h1>
+
+<form action="/networks/<%= @network.id %>/update">
+  <div>
+    <label for="chanel">chanel</label><br />
+    <input id="chanel" name="chanel" value="<%= @network.chanel  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

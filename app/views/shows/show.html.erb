@@ -1,0 +1,29 @@
+<h1>Show #<%= @show.id %></h1>
+
+<div>
+  <strong>Title</strong>:<br />
+  <p><%= @show.title %></p>
+</div>
+<div>
+  <strong>Descrip</strong>:<br />
+  <p><%= @show.descrip %></p>
+</div>
+<div>
+  <strong>Episode num</strong>:<br />
+  <p><%= @show.episode_num %></p>
+</div>
+<div>
+  <strong>Actors on <%= @show.title %></strong>:<br />
+  <% @show.charecters.each do |charecter|%>
+  <p><%= charecter.actor.name %> where he/she plays <%= charecter.plays %></p><br />
+  <% end%>
+<strong><%= @show.title %> is on</strong>:<br />
+  <% @show.ons.each do |on|%>
+  <p><%= on.network.chanel %> at <%=on.appears_at%></p><br />
+  <% end %>
+</div>
+
+<a href="/shows/<%= @show.id %>/edit">Edit</a> |
+<a href="/shows/<%= @show.id %>/destroy">Destroy</a>|
+<a href="/new_charecter/<%= @show.id %>"> Add a new charecter to this show</a> |
+<a href="/new_on/1"> Add a new showtime to this show</a>

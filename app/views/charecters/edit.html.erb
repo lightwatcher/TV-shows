@@ -1,0 +1,21 @@
+<h1>Editing Charecter #<%= @charecter.id %></h1>
+
+<form action="/charecters/<%= @charecter.id %>/update">
+  <div>
+    <label for="actor_id">actor_id</label><br />
+    <input id="actor_id" name="actor_id" value="<%= @charecter.actor_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="show_id">show_id</label><br />
+    <input id="show_id" name="show_id" value="<%= @charecter.show_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="plays">plays</label><br />
+    <input id="plays" name="plays" value="<%= @charecter.plays  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

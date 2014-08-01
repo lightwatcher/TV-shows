@@ -1,0 +1,31 @@
+<h1>Ons</h1>
+
+<p><a href="/new_on">Add a New On</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Show</th>
+      <th>Network</th>
+      <th>Appears at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @ons.each do |on| %>
+    <tr>
+          <td><%= on.show_id %></td>
+          <td><%= on.network_id %></td>
+          <td><%= on.appears_at %></td>
+          <td><a href="/ons/<%= on.id %>">Show</a>
+        </td>
+      <td><a href="/ons/<%= on.id %>/edit">Edit</a></td>
+      <td><a href="/ons/<%= on.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

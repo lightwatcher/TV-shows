@@ -1,0 +1,21 @@
+<h1>Editing On #<%= @on.id %></h1>
+
+<form action="/ons/<%= @on.id %>/update">
+  <div>
+    <label for="show_id">show_id</label><br />
+    <input id="show_id" name="show_id" value="<%= @on.show_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="network_id">network_id</label><br />
+    <input id="network_id" name="network_id" value="<%= @on.network_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="appears_at">appears_at</label><br />
+    <input id="appears_at" name="appears_at" value="<%= @on.appears_at  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

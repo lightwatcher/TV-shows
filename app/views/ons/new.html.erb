@@ -1,0 +1,30 @@
+<h1>New Time</h1>
+
+<form action="/create_on">
+  <div>
+    <label for="show_id">Select your show</label><br />
+    <select>
+      <option id="show_id" name="show_id"> Select one  </option>
+      <% @shows.each do |show|%>
+      <option  <%= if (@selected.to_i == show.id) then "selected" end %> id="show_id" name="show_id" value="<%= show.id %>" > <%= show.title %> </option>
+      <% end%>
+    </select>
+  </div>
+  <div>
+    <label for="network_id">Select your network</label><br />
+    <select>
+      <option id="show_id" name="show_id"> Select one  </option>
+      <% @networks.each do |network|%>
+      <option id="network_id" name="network_id" value="<%= network.id %>" > <%= network.chanel %>
+      <% end%>
+    </select>
+  </div>
+  <div>
+    <label for="appears_at">What time</label><br />
+    <input id="appears_at" name="appears_at" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+

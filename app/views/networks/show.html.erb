@@ -1,0 +1,16 @@
+<h1>Network #<%= @network.id %></h1>
+
+<div>
+  <strong>Chanel</strong>:<br />
+  <p><%= @network.chanel %></p>
+</div>
+<div>
+<strong>Shows on network</strong>:<br />
+  <% @network.ons.each do |on|%>
+  <p><%= on.show.title %> where its on at <%= on.appears_at %></p><br />
+  <% end %>
+</div>
+
+<a href="/networks/<%= @network.id %>/edit">Edit</a> |
+<a href="/networks/<%= @network.id %>/destroy">Destroy |</a>
+<a href="new_on/1"> Add a show</a>
